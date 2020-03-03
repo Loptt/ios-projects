@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarea2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-v6-XQF">
+                                <rect key="frame" x="111.5" y="36" width="152.5" height="78"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkn-gn-FYz">
+                                <rect key="frame" x="104.5" y="311.5" width="166" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92U-1M-WWH">
+                                        <rect key="frame" x="34" y="71.5" width="98" height="101"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="84"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="92U-1M-WWH" firstAttribute="centerX" secondItem="Wkn-gn-FYz" secondAttribute="centerX" id="d1R-k6-ihu"/>
+                                    <constraint firstItem="92U-1M-WWH" firstAttribute="centerY" secondItem="Wkn-gn-FYz" secondAttribute="centerY" id="f1m-oK-3aw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI1-tt-GO4">
+                                <rect key="frame" x="147.5" y="582" width="80" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-ha-DpA">
+                                <rect key="frame" x="134" y="233.5" width="107" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="GsC-ha-DpA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.75" id="0KZ-Ex-gZm"/>
+                            <constraint firstItem="XI1-tt-GO4" firstAttribute="top" secondItem="Wkn-gn-FYz" secondAttribute="bottom" constant="26.5" id="2yn-Dg-ywH"/>
+                            <constraint firstItem="Wkn-gn-FYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Me-Ie-IcP"/>
+                            <constraint firstItem="GsC-ha-DpA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9jM-vM-JrR"/>
+                            <constraint firstItem="Wkn-gn-FYz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.3" id="NwW-7P-hhW"/>
+                            <constraint firstItem="Wkn-gn-FYz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.365817" id="Ryo-SC-7BU"/>
+                            <constraint firstItem="sqZ-v6-XQF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vvg-vX-Rew"/>
+                            <constraint firstItem="Wkn-gn-FYz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.442667" id="oxg-QP-L49"/>
+                            <constraint firstItem="XI1-tt-GO4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uoA-ZN-Xgu"/>
+                            <constraint firstItem="sqZ-v6-XQF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="wTB-wO-M7l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z1O-RF-yf6" appends="YES" id="qUL-aJ-NXS"/>
+                            <outletCollection property="gestureRecognizers" destination="4xQ-TA-1dq" appends="YES" id="qPS-nU-NpJ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="lbDay" destination="92U-1M-WWH" id="dGg-2h-WuC"/>
+                        <outlet property="lbMonth" destination="GsC-ha-DpA" id="v1X-JU-KYQ"/>
+                        <outlet property="lbWeekday" destination="XI1-tt-GO4" id="Kpb-WQ-zzX"/>
+                        <outlet property="lbYear" destination="sqZ-v6-XQF" id="jD8-ff-Abb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="z1O-RF-yf6">
+                    <connections>
+                        <action selector="gestureAction1:" destination="BYZ-38-t0r" id="ref-yb-LgB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4xQ-TA-1dq">
+                    <connections>
+                        <action selector="gestureAction2:" destination="BYZ-38-t0r" id="N9L-Lw-cME"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

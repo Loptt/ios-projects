@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-LT-MyG" userLabel="View Morada">
+                                <rect key="frame" x="137.5" y="378.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oD8-LT-MyG" secondAttribute="height" multiplier="1:1" id="Lsx-O6-Dsz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knD-Vp-KgH">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-H1-wrC" userLabel="View Verde">
+                                <rect key="frame" x="37.5" y="88.5" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="knD-Vp-KgH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2vt-74-a1M"/>
+                            <constraint firstItem="oD8-LT-MyG" firstAttribute="top" secondItem="knD-Vp-KgH" secondAttribute="bottom" constant="30" id="FFg-y0-yCr"/>
+                            <constraint firstItem="KHI-H1-wrC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="IJf-Ur-fEB"/>
+                            <constraint firstItem="KHI-H1-wrC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JDw-f9-HyT"/>
+                            <constraint firstItem="KHI-H1-wrC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Lnz-Yx-zDp"/>
+                            <constraint firstItem="knD-Vp-KgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iaM-ki-eoY"/>
+                            <constraint firstItem="oD8-LT-MyG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oLY-Uc-bzD"/>
+                            <constraint firstItem="oD8-LT-MyG" firstAttribute="height" secondItem="KHI-H1-wrC" secondAttribute="height" multiplier="0.5" id="tZY-MA-ChT"/>
+                            <constraint firstItem="knD-Vp-KgH" firstAttribute="top" secondItem="KHI-H1-wrC" secondAttribute="bottom" constant="30" id="zdP-6v-Ba1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
