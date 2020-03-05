@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -200,6 +200,10 @@
                         <outlet property="viewChoice2" destination="cYb-Qu-MkM" id="1K3-rU-VG4"/>
                         <outlet property="viewChoice3" destination="pzR-oc-pQ1" id="2Vi-o8-wOz"/>
                         <outlet property="viewChoice4" destination="QhX-oJ-kGf" id="lxW-kI-GKg"/>
+                        <outlet property="viewHint1" destination="KVQ-5S-6LT" id="h4T-1Z-S1S"/>
+                        <outlet property="viewHint2" destination="eBs-TA-McK" id="ejo-BA-1vF"/>
+                        <outlet property="viewHint3" destination="7eb-vA-qt6" id="sxQ-Z4-gCE"/>
+                        <outlet property="viewHint4" destination="uC0-MA-YkN" id="iPw-6Y-1nC"/>
                         <outlet property="viewRes1" destination="WVB-nW-1o4" id="our-CY-2h2"/>
                         <outlet property="viewRes2" destination="SmV-z0-71h" id="oN2-0G-gRs"/>
                         <outlet property="viewRes3" destination="zVm-o7-cRs" id="6XH-zh-Gr4"/>
@@ -208,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58.399999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="418" y="95"/>
         </scene>
     </scenes>
 </document>
