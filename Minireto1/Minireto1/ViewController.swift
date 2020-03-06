@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     var answer: [UIColor] = []
     
     var backColor = UIColor.lightGray
+    
+    var tries = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +61,7 @@ class ViewController: UIViewController {
         hintViews.append(viewHint2)
         hintViews.append(viewHint1)
         
-        initializeColors()
-        initializeChoices()
-        initializeHints()
+        restart()
     }
     
     func initializeColors() {
@@ -92,6 +92,13 @@ class ViewController: UIViewController {
             view.backgroundColor = backColor
         }
     }
+    
+    func restart() {
+        initializeColors()
+        initializeChoices()
+        initializeHints()
+        tries = 0
+    }
 
     @IBAction func cambiarEstado(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1 {
@@ -100,9 +107,9 @@ class ViewController: UIViewController {
             respuesta.isHidden = true
         }
     }
+    
     @IBAction func iniciar(_ sender: Any) {
-        initializeColors()
-        initializeChoices()
+        restart()
     }
     
     
@@ -116,12 +123,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func probar(_ sender: UIButton) {
+        
         var encontrados = [false, false, false, false, false, false]
         
         var idx: Int
         var error = false
-        
-        initializeHints()
         
         for choice in choiceViews {
             idx = possibleColors.firstIndex(of: choice.backgroundColor!)!
@@ -142,6 +148,9 @@ class ViewController: UIViewController {
             return
         }
         
+        initializeHints()
+        tries += 1
+        
         var correctColor: Int = 0
         var correctAll: Int = 0
     
@@ -160,6 +169,10 @@ class ViewController: UIViewController {
             }
         }
         
+        if correctAll == 4 {
+            showWin()
+        }
+        
         for hint in hintViews {
             if correctAll > 0 {
                 hint.backgroundColor = UIColor.red
@@ -169,6 +182,16 @@ class ViewController: UIViewController {
                 correctColor -= 1
             }
         }
+    }
+    
+    func showWin() {
+        for hint in hintViews {
+            hint.backgroundColor = UIColor.red
+        }
+        
+        let alert = UIAlertController(title: "Ganaste!", message: "Resolviste el juego en \(tries) intentos", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(alert: UIAlertAction!) in self.restart()}))
+        present(alert, animated: true, completion: nil)
     }
 }
 
