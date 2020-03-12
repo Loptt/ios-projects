@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var respuesta: UIView!
+    
     @IBOutlet weak var viewRes1: UIButton!
     @IBOutlet weak var viewRes2: UIButton!
     @IBOutlet weak var viewRes3: UIButton!
@@ -21,16 +22,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewChoice3: UIButton!
     @IBOutlet weak var viewChoice4: UIButton!
     
+    @IBOutlet weak var viewHint1: UIButton!
+    @IBOutlet weak var viewHint2: UIButton!
+    @IBOutlet weak var viewHint3: UIButton!
+    @IBOutlet weak var viewHint4: UIButton!
+    
+    
     var answerViews: [UIButton] = []
     var choiceViews: [UIButton] = []
+    var hintViews: [UIButton] = []
     
     let possibleColors = [UIColor.green, UIColor.blue, UIColor.purple, UIColor.red, UIColor.yellow, UIColor.cyan]
     
     var answer: [UIColor] = []
+    
+    var backColor = UIColor.lightGray
+    
+    var tries = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
         respuesta.isHidden = true
+        
+        view.backgroundColor = backColor
         
         answerViews.append(viewRes1)
         answerViews.append(viewRes2)
@@ -42,8 +56,12 @@ class ViewController: UIViewController {
         choiceViews.append(viewChoice3)
         choiceViews.append(viewChoice4)
         
-        initializeColors()
-        initializeChoices()
+        hintViews.append(viewHint4)
+        hintViews.append(viewHint3)
+        hintViews.append(viewHint2)
+        hintViews.append(viewHint1)
+        
+        restart()
     }
     
     func initializeColors() {
@@ -68,6 +86,19 @@ class ViewController: UIViewController {
             choiceViews[i].backgroundColor = possibleColors[i]
         }
     }
+    
+    func initializeHints() {
+        for view in hintViews {
+            view.backgroundColor = backColor
+        }
+    }
+    
+    func restart() {
+        initializeColors()
+        initializeChoices()
+        initializeHints()
+        tries = 0
+    }
 
     @IBAction func cambiarEstado(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1 {
@@ -76,9 +107,9 @@ class ViewController: UIViewController {
             respuesta.isHidden = true
         }
     }
+    
     @IBAction func iniciar(_ sender: Any) {
-        initializeColors()
-        initializeChoices()
+        restart()
     }
     
     
@@ -92,6 +123,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func probar(_ sender: UIButton) {
+        
         var encontrados = [false, false, false, false, false, false]
         
         var idx: Int
@@ -116,7 +148,50 @@ class ViewController: UIViewController {
             return
         }
         
+        initializeHints()
+        tries += 1
         
+        var correctColor: Int = 0
+        var correctAll: Int = 0
+    
+        
+        for (i, choice) in choiceViews.enumerated() {
+            let idx = answer.firstIndex(of: choice.backgroundColor!)
+            
+            if idx == nil {
+                continue
+            }
+            
+            if idx == i {
+                correctAll += 1
+            } else {
+                correctColor += 1
+            }
+        }
+        
+        if correctAll == 4 {
+            showWin()
+        }
+        
+        for hint in hintViews {
+            if correctAll > 0 {
+                hint.backgroundColor = UIColor.red
+                correctAll -= 1
+            } else if correctColor > 0 {
+                hint.backgroundColor = UIColor.white
+                correctColor -= 1
+            }
+        }
+    }
+    
+    func showWin() {
+        for hint in hintViews {
+            hint.backgroundColor = UIColor.red
+        }
+        
+        let alert = UIAlertController(title: "Ganaste!", message: "Resolviste el juego en \(tries) intentos", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(alert: UIAlertAction!) in self.restart()}))
+        present(alert, animated: true, completion: nil)
     }
 }
 
