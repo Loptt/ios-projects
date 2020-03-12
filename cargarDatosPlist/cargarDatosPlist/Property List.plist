@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>tipo</key>
+		<string>iPhone 7</string>
+		<key>capacidad</key>
+		<string>128 Gb</string>
+		<key>precio</key>
+		<integer>13499</integer>
+		<key>urlFoto</key>
+		<string>http://i-cdn.phonearena.com/images/phones/63264-xlarge/Apple-iPhone-7-6.jpg</string>
+	</dict>
+	<dict>
+		<key>tipo</key>
+		<string>iPhone 8</string>
+		<key>capacidad</key>
+		<string>256 Gb</string>
+		<key>precio</key>
+		<integer>18499</integer>
+		<key>urlFoto</key>
+		<string>http://media-s3-us-east-1.ceros.com/business-insider/images/2017/09/12/bf6c6af2001936a71d8ac0de0b5dc92f/iphone-8-plus.png</string>
+	</dict>
+	<dict>
+		<key>tipo</key>
+		<string>iPhone 8 Plus</string>
+		<key>capacidad</key>
+		<string>256 Gb</string>
+		<key>precio</key>
+		<integer>20699</integer>
+		<key>urlFoto</key>
+		<string>https://csmobiles.com/5791-large_default/apple-iphone-8-plus-4g-64gb-rojo.jpg</string>
+	</dict>
+	<dict>
+		<key>tipo</key>
+		<string>iPhone XR</string>
+		<key>capacidad</key>
+		<string>256 Gb</string>
+		<key>precio</key>
+		<integer>22199</integer>
+		<key>urlFoto</key>
+		<string>https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/apple/apple-iphone-xr/blue/Apple-iPhoneXr-Blue-1-3x.jpg</string>
+	</dict>
+	<dict>
+		<key>tipo</key>
+		<string>iPhone XS</string>
+		<key>capacidad</key>
+		<string>256 Gb</string>
+		<key>precio</key>
+		<integer>28199</integer>
+		<key>urlFoto</key>
+		<string>http://d176tvmxv7v9ww.cloudfront.net/product/cache/12/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-xs-space-select-2018_av2_1_2.jpg</string>
+	</dict>
+</array>
+</plist>
