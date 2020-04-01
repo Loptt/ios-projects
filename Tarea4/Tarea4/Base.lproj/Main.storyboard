@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarea4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgR-zD-U42">
+                                <rect key="frame" x="136.66666666666666" y="378.66666666666669" width="140.99999999999997" height="139.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="IUZ-xE-ZCS"/>
+                                    <constraint firstAttribute="width" constant="141" id="yfj-iP-hrq"/>
+                                </constraints>
+                                <state key="normal" image="go-button-png"/>
+                                <connections>
+                                    <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6y-2R-GIS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOq-6k-i6w">
+                                <rect key="frame" x="106.66666666666669" y="744" width="201" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="9Ud-na-y8U"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="186" id="EaD-eT-0tk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="dhg-7C-sEQ"/>
+                                    <constraint firstAttribute="width" constant="201" id="kDO-hD-6R7"/>
+                                </constraints>
+                                <state key="normal" title="Reset" image="unnamed"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbj-m7-hIY"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-CE-FOm">
+                                <rect key="frame" x="47" y="116" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Rt4-uX-YHp"/>
+                                    <constraint firstAttribute="width" constant="320" id="wQJ-fG-zfx"/>
+                                </constraints>
+                            </pickerView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTl-uF-V4e">
+                                <rect key="frame" x="59" y="345" width="297" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Won!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-jD-JUO">
+                                        <rect key="frame" x="72" y="82" width="153" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44818652849740936" green="0.11835660251872321" blue="0.14004394388364966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XOq-6k-i6w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sd-Dr-MSw"/>
+                            <constraint firstItem="mgR-zD-U42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NhN-iq-B8O"/>
+                            <constraint firstItem="xSj-CE-FOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vmt-VF-M7s"/>
+                            <constraint firstItem="xSj-CE-FOm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="cG4-yL-EBP"/>
+                            <constraint firstItem="mgR-zD-U42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uhE-rv-KrH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XOq-6k-i6w" secondAttribute="bottom" constant="34" id="wD4-Cq-qzA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="picker1" destination="xSj-CE-FOm" id="Nqo-lM-8mq"/>
+                        <outlet property="wonView" destination="yTl-uF-V4e" id="o4V-aS-Sah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="42.028985507246382" y="101.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="go-button-png" width="214" height="211"/>
+        <image name="unnamed" width="512" height="253"/>
+    </resources>
 </document>
