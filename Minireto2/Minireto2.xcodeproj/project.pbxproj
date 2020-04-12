@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08028EFF2442724B00890600 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		08028EFF2442724B00890600 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		08028F01244274CD00890600 /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		083620382442295700F85E7F /* Minireto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minireto2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0836203B2442295700F85E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 		0836202F2442295700F85E7F = {
 			isa = PBXGroup;
 			children = (
-				08028EFF2442724B00890600 /* TableViewController.swift */,
 				0836203A2442295700F85E7F /* Minireto2 */,
 				083620512442295800F85E7F /* Minireto2Tests */,
 				0836205C2442295800F85E7F /* Minireto2UITests */,
@@ -104,6 +103,7 @@
 		0836203A2442295700F85E7F /* Minireto2 */ = {
 			isa = PBXGroup;
 			children = (
+				08028EFF2442724B00890600 /* TableViewController.swift */,
 				0836203B2442295700F85E7F /* AppDelegate.swift */,
 				0836203D2442295700F85E7F /* SceneDelegate.swift */,
 				0836203F2442295700F85E7F /* ViewController.swift */,

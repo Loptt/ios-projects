@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var possibleColors: [UIColor] = []
     var administrador: administraCategoria!
+    var add: Bool = true
+    var modifyCateogory: Categoria!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         table.delegate = self
         table.dataSource = self
+        
+        if !add {
+            tfTitle.isUserInteractionEnabled = false
+            tfTitle.text = modifyCateogory.title
+            self.view.backgroundColor = modifyCateogory.color
+        }
+        
+        self.title = "Administrar categoria"
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,15 +48,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let newTitle = tfTitle.text {
-            if newTitle.isEmpty {
-                return
+        if add {
+            if let newTitle = tfTitle.text {
+                if newTitle.isEmpty {
+                    return
+                }
+                let color = possibleColors[indexPath.row]
+                
+                administrador.agregaCategoria(categoria: Categoria(title: newTitle, color: color))
+                navigationController?.popViewController(animated: true)
+                
             }
+        } else {
             let color = possibleColors[indexPath.row]
-            
-            administrador.agregaCategoria(categoria: Categoria(title: newTitle, color: color))
+            administrador.modificaCategoria(categoria: Categoria(title: modifyCateogory.title, color: color))
             navigationController?.popViewController(animated: true)
         }
+        
     }
 }
 
