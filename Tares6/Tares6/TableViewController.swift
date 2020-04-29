@@ -20,6 +20,14 @@ class TableViewController: UITableViewController, administradorArticulos {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let app = UIApplication.shared
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(guardarArticulos), name: UIApplication.didEnterBackgroundNotification, object: app)
+        
+        if FileManager.default.fileExists(atPath: dataFileURL().path) {
+            obtenerArticulos()
+        }
     }
 
     // MARK: - Table view data source
@@ -71,7 +79,36 @@ class TableViewController: UITableViewController, administradorArticulos {
     func modificarArticulo(articulo: Articulo) {
         tableView.reloadData()
     }
-
+    
+    func dataFileURL() -> URL {
+        let url = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+        let pathArchivo = url.appendingPathComponent("Articulos.plist")
+        return pathArchivo
+    }
+    
+    @objc func guardarArticulos() {
+        do {
+            let data = try PropertyListEncoder().encode(listaArticulos)
+            try data.write(to: dataFileURL())
+        }
+        catch {
+            print("Error al guardar archivos")
+        }
+    }
+    
+    func obtenerArticulos() {
+        listaArticulos.removeAll()
+        
+        do {
+            let data = try Data.init(contentsOf: dataFileURL())
+            listaArticulos = try PropertyListDecoder().decode([Articulo].self, from: data)
+        }
+        catch {
+            print("Error al cargar archivos")
+        }
+        
+        tableView.reloadData()
+    }
 }
 
 protocol administradorArticulos {
