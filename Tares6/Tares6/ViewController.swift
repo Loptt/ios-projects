@@ -14,11 +14,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfDesc: UITextField!
     @IBOutlet weak var tfCant: UITextField!
     
+    var articulo: Articulo!
+    var add: Bool = false
+    
+    var delegate: administradorArticulos!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if !add {
+            tfId.text = articulo.id
+            tfDesc.text = articulo.desc
+            tfCant.text = String(articulo.cant)
+        }
     }
 
-
+    @IBAction func guardar(_ sender: Any) {
+        if let id = tfId.text, let desc = tfDesc.text, let cant = Int(tfCant.text!) {
+            if add {
+                delegate.agregarArticulo(articulo: Articulo(id: id, desc: desc, cant: cant))
+            } else {
+                articulo.id = id
+                articulo.desc = desc
+                articulo.cant = cant
+                delegate.modificarArticulo(articulo: articulo)
+            }
+            
+            navigationController?.popViewController(animated: true)
+        }
+    }
 }
 
